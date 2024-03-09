@@ -1,6 +1,9 @@
+.container {
+  display: flex;
+}
+
 #earth {
   position: relative;
-  left: 250px;
   max-width: 100%;
   max-height: 100%;
   height: 300px;
@@ -25,11 +28,10 @@
   }
 }
 
+
 #bio {
-  display: grid;
+  display: flex;
   align-items: center;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 5px;
 }
 
 body {
@@ -38,106 +40,94 @@ body {
   color: rgb(5, 5, 5);
   }
   h1 {
-    position: relative;
-    height: 100px;
-    width: 300px;
-    margin:auto;
-    top: 0;
-    left: 0;
     text-align: center;
     color: rgb(0, 7, 7);
   }
-  button {
-    cursor: pointer;
-    color: #0a0a23;
-    background-color: #feac32;
-    background-image: linear-gradient(#fecc4c, #ffac33);
-    border: 3px solid #feac32;
-  }
 
-  * {
-    margin: 0;
-  }
+  * {box-sizing:border-box}
 
-  #slider{
-    height: 500px;
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
 
-  .container{
-    width: 1600px;
-    margin:auto;
-  }
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
 
-  .subcontainer{
-    width: 85%;
-    margin: auto;
-  }
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
 
-  .slide-img{
-    width:100%;
-    height: 275px;
-    border-radius:5px;
-    background-position: center;
-    background-size: cover;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.5s;
-  }
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
 
-  .slide-img:hover{
-    box-shadow: 0 0 0 200px rgba(0, 0, 0, 0.9) inset;
-  }
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
 
-  .slide-img a{
-    opacity: 0;
-    text-decoration: none;
-    transform: scale(0);
-    transition: 0.8s;
-    font-size: 1.5rem;
-    color: white;
-  }
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
 
-  .slide-img:hover a{
-    opacity: 1;
-    transform: scale(1);
-  }
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
 
-  .img-1{
-    background-image: url(https://lh3.googleusercontent.com/pw/AP1GczP4WyJyLODbk-0V3fCdIwwOXP97WsREMGlWydkFFgr7KkK7CI5DAzqLaUdHs7A5cB8WwJL0ot2zhaBBUHROuY49FDeKSMFhmyJOLSNYUD74T-uJS1cu=w2400);
-  }
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
 
-  .img-2{
-    background-image: url(https://lh3.googleusercontent.com/pw/AP1GczPaiQbc0pHzokLcFXltQ9VR4vRy1z6oBIgmPQXLeoQU_gO9SAGnNajARgqIS0-1xZsYl0XvSiATJDWtlRg3k6IPlqNh9xZfbtCag1DinXAwZRH7JZCD=w2400);
-  }
+.active, .dot:hover {
+  background-color: #717171;
+}
 
-  .img-3{
-    background-image: url(https://lh3.googleusercontent.com/pw/AP1GczPPCNIkZBxW3WhR9APdXQ9Cz68yJS916Ar11E_i-qTh5ooUHdanN1dIyTkzg4qLbMuzQ8tRCibNtP4YXHk17wd02yKrEmYF4Fx9QZp5J46ovco6dJW9=w2400);
-  }
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
 
-  .img-4{
-    background-image: url(https://lh3.googleusercontent.com/pw/AP1GczPjDMav6dq8bLoUFDMRq0qoWR6mpjlMzxo5Y_g1nYGRkAB87BJKFO3SKn71ysz5yKdgUk-n03jl3NkqociIfCLZR2lOG6G-q0Yb-kazxHqYqbBA8B93=w2400);
-  }
-
-  .img-5{
-    background-image: url(https://lh3.googleusercontent.com/pw/AP1GczPqnL0FLTV8EOozMUIZ1vr74tF7wt4UQv7-j6lf7lEQCc9DY2IibcU59gC101dM-D5N6S8MDnjAgndWqAala6Bi60qT9p1Vmm7-0xo5IyuhODJ20OyQ=w2400);
-  }
-
-  .img-6{
-    background-image: url(https://lh3.googleusercontent.com/pw/AP1GczM-eZrDv1YzqL5d35EWhPOKqH7FI_B3YOtkgRjgF1r5CdaKuxnponzjI88LmUBVjfz61g0gca7Oc5g9YKiF06_Q-Zl_VBSxLneZFoXw0mg85Une5Eop=w2400);
-  }
-
-  .img-7{
-    background-image: url(https://lh3.googleusercontent.com/pw/AP1GczOw9sFr9jE9RDO51HrftvePGWDBx_vkRvtBMSUsrWJ-1vXeU4KaGDoyymMcjIZh2pxcGB8lVdqJPSv9TWbT6l7Nrvt-NmPg3MU-neROC8YE5RYGIzsf=w2400);
-  }
-
-  @media(max-width:1600px){
-    .container{
-      width: 100%;
-    }
-  }
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
