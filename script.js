@@ -1,7 +1,3 @@
-const h2 = document.createElement("h2");
-h2.textContent = "Place's I've travelled too";
-
-document.querySelector("body").appendChild(h2);
 
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -30,4 +26,13 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
+}
+
+function showList(id) {
+    let list = document.getElementById(id);
+    if (list.style.display === "none") {
+        list.style.display = "block";
+    } else {
+        list.style.display = "none";
+    }
 }
