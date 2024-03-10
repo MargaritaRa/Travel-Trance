@@ -10,29 +10,24 @@
 <body>
     <h1>Margarita's Journey</h1>
     <div id="earth"></div>
-    <div class="text">
-        <h3 id="bio">My bio</h3>
-    </div>
-    <p>My name is Margarita, yes that is my real name. Now that that's out the way let's get onto the next part :)</p>
-    
-    <p><strong>Top 3 things you need to know!</strong></p>
-    <ol>
-        <li>Yes, I am Hispanic.</li>
-        <li>I love to travel.</li>  
-        <li>There's more to me than meets the eyes.</li>
-    </ol>
-
-    <h2>Let's start with something easy. My career background</h2>
-    <div class="career-info">
-        <h3>My time at Synchrony</h3>
-        <p>I worked at Synchrony for 4 years. I worked in the Recovery building. I was not sure what that was when I first started. I just knew I wanted to not work in customer solutions. I worked as a supervisor.</p>
-
-        <h3>My time at Contiki</h3>
-        <p>6 months, I worked in Asia as a trip manager. It was my spur of the moment change in my career. In less than 1 month, I visited 4 new countries: Thailand, Laos, Cambodia, and Vietnam. Then I was in Japan for 4 months.</p>
-
-        <h3>My time Teaching</h3>
-        <p>I worked as a teacher for 1 year.</p>
-    </div>
+    <br>
+    <table id="my-bio">
+        <tr>
+            <th><h2><u>My Bio</u></h2></th>
+            <th><h2><u>Top 3 things about me!</u></h2></th>
+        </tr>
+        <tr>
+            <td id="info">Let me introduce myself, my name is Margarita, and that is indeed my real name. My parents are from the Dominican Republic (hence the origin of my name). The past year has been a whirlwind, filled with unexpected twists and turns that have kept her on her toes. I left my job at Synchrony and embraced a new role as a trip manager, only to later reconsider and find myself now residing in the heart of New York City, specifically Brooklyn. I have recently decided to become a Software Engineer and find myself once again switching careers :)</td>
+            <td id="top3">
+                <ol>
+                    <li>I love to read.</li>
+                    <li>I love to travel.</li>  
+                    <li>There's more to me than meets the eyes.</li>
+                </ol>
+            </td>
+        </tr>
+    </table>
+    <br>
 
     <div class="slideshow-container">
         <!-- Full-width images with number and caption text -->
@@ -84,6 +79,30 @@
         <span class="dot" onclick="currentSlide(4)"></span>
         <span class="dot" onclick="currentSlide(5)"></span>
         <span class="dot" onclick="currentSlide(6)"></span>
+    </div>
+
+    <h2 id="career-background"> My Career Background</h2>
+    <table id="jobs">
+        <tr>
+            <th>My time at Synchrony</th>
+            <th>My time at contiki</th>
+            <th>My time as a teacher</th>
+        </tr>
+        <tr>
+            <td>I worked at Synchrony for 4 years. I worked in the Recovery building. I was not sure what that was when I first started. I just knew I wanted to not work in customer solutions. I worked as a supervisor.</td>
+            <td>6 months, I worked in Asia as a trip manager. It was my spur of the moment change in my career. In less than 1 month, I visited 4 new countries: Thailand, Laos, Cambodia, and Vietnam. Then I was in Japan for 4 months.</td>
+            <td>I worked as a teacher for 1 year.</td>
+        </tr>
+    </table>
+    <br>
+    <div id="countries">
+        <button id="button1">North America</button>
+            <ul id="list-north"
+        <button id="button2">South America</button>
+        <button id="button3">Europe</button>
+        <button id="button4">Africa/West Asia</button>
+        <button id="button5">Asia</button>
+        <button id="button6">Australia</button>
     </div>
 
     <script src="script.js"></script>

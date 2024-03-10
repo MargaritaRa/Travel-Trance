@@ -1,9 +1,9 @@
 const h2 = document.createElement("h2");
-h2.textContent = "The story of why I changed my career";
+h2.textContent = "Place's I've travelled too";
 
 document.querySelector("body").appendChild(h2);
 
-let slideIndex = 7;
+let slideIndex = 1;
 showSlides(slideIndex);
 
 // Next/previous controls
